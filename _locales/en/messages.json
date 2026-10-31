@@ -1,0 +1,16 @@
+{
+  "extDescription": { "message": "Select an area of a web page and copy its text and tables with formatting, like Edge's Web select." },
+  "actionTitle": { "message": "Web Select – select and copy an area" },
+  "commandDescription": { "message": "Select and copy an area" },
+  "menuTitle": { "message": "Select and copy area" },
+  "hint": { "message": "Drag to select an area  ·  Esc to cancel" },
+  "errorGeneric": { "message": "Something went wrong while copying" },
+  "errorNoText": { "message": "No text found in the selection" },
+  "errorClipboard": { "message": "Couldn't write to the clipboard" },
+  "copiedTableSize": { "message": "Copied table ($1 rows × $2 columns)" },
+  "copiedOneTable": { "message": "Copied a table" },
+  "copiedTables": { "message": "Copied $1 tables" },
+  "copiedOneTableAndText": { "message": "Copied a table and text" },
+  "copiedTablesAndText": { "message": "Copied $1 tables and text" },
+  "copiedText": { "message": "Copied text" }
+}

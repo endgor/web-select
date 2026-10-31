@@ -14,6 +14,10 @@
   const CELL_OVERLAP = 0.4;   // hur stor del av en tabellcell markeringen måste täcka
   const SKIP_TAGS = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE', 'TEXTAREA', 'SELECT']);
 
+  // Texter från _locales (följer webbläsarens språk). Utan chrome.i18n, t.ex. i test, visas nyckeln.
+  const t = (key, subs) =>
+    (globalThis.chrome && chrome.i18n && chrome.i18n.getMessage(key, subs && subs.map(String))) || key;
+
   const MAX_HIGHLIGHTS = 3000;
   const HIGHLIGHT_CSS = 'background:rgba(10,132,255,.28);box-shadow:inset 0 0 0 1px rgba(10,132,255,.8);border-radius:2px;';
 
@@ -41,7 +45,7 @@
     const hint = el('div', `display:block;position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:${Z};` +
       'pointer-events:none;background:#1f1f1f;color:#fff;font:13px/1.4 system-ui,sans-serif;padding:8px 14px;' +
       'border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.3);white-space:nowrap;',
-      'Dra för att markera ett område  ·  Esc avbryter');
+      t('hint'));
 
     overlay.addEventListener('pointerdown', onDown);
     overlay.addEventListener('pointermove', onMove);
@@ -176,12 +180,12 @@
       result = extract(sel);
     } catch (err) {
       console.error('[Web Select]', err);
-      toast('Något gick fel vid kopieringen', true);
+      toast(t('errorGeneric'), true);
       return;
     }
     state.lastResult = result;
     if (!result.text.trim()) {
-      toast('Hittade ingen text i markeringen', true);
+      toast(t('errorNoText'), true);
       return;
     }
     const copied = copyToClipboard(result.html, result.text);
@@ -192,7 +196,7 @@
       console.warn('[Web Select] Kunde inte visa highlight:', err);
     }
     copied.then((ok) => {
-      toast(ok ? result.summary : 'Kunde inte skriva till urklipp', !ok);
+      toast(ok ? result.summary : t('errorClipboard'), !ok);
     });
   }
 
@@ -575,12 +579,11 @@
     const tables = parts.filter((p) => p.type === 'table');
     const hasText = parts.some((p) => p.type === 'block');
     if (tables.length === 1 && !hasText) {
-      return `Kopierade tabell (${tables[0].rows} rader × ${tables[0].cols} kolumner)`;
+      return t('copiedTableSize', [tables[0].rows, tables[0].cols]);
     }
-    if (tables.length) {
-      return `Kopierade ${tables.length === 1 ? 'en tabell' : tables.length + ' tabeller'}${hasText ? ' och text' : ''}`;
-    }
-    return 'Kopierade text';
+    if (tables.length === 1) return t('copiedOneTableAndText');
+    if (tables.length) return t(hasText ? 'copiedTablesAndText' : 'copiedTables', [tables.length]);
+    return t('copiedText');
   }
 
   function intersects(a, b) {

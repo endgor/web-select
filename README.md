@@ -8,9 +8,11 @@
 
 ---
 
-Press **Ctrl+Shift+S**, click the toolbar icon, or choose **Markera och kopiera område** from the right-click menu. Then drag a rectangle over what you want to copy, much like the Snipping Tool. While you drag, the exact words and table cells that will be copied are highlighted. When you release, the content goes to your clipboard.
+Press **Ctrl+Shift+S**, click the toolbar icon, or choose **Select and copy area** from the right-click menu. Then drag a rectangle over what you want to copy, much like the Snipping Tool. While you drag, the exact words and table cells that will be copied are highlighted. When you release, the content goes to your clipboard.
 
 Tables paste into Excel as real cells. Headings, lists, bold text, and links are kept when you paste into Word or Outlook.
+
+The extension follows your browser's language. English and Swedish are included.
 
 ## Install
 

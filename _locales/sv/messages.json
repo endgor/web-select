@@ -1,0 +1,16 @@
+{
+  "extDescription": { "message": "Markera ett område på en webbsida och kopiera text och tabeller med formatering, som Edges Web select." },
+  "actionTitle": { "message": "Web Select – markera och kopiera ett område" },
+  "commandDescription": { "message": "Markera och kopiera ett område" },
+  "menuTitle": { "message": "Markera och kopiera område" },
+  "hint": { "message": "Dra för att markera ett område  ·  Esc avbryter" },
+  "errorGeneric": { "message": "Något gick fel vid kopieringen" },
+  "errorNoText": { "message": "Hittade ingen text i markeringen" },
+  "errorClipboard": { "message": "Kunde inte skriva till urklipp" },
+  "copiedTableSize": { "message": "Kopierade tabell ($1 rader × $2 kolumner)" },
+  "copiedOneTable": { "message": "Kopierade en tabell" },
+  "copiedTables": { "message": "Kopierade $1 tabeller" },
+  "copiedOneTableAndText": { "message": "Kopierade en tabell och text" },
+  "copiedTablesAndText": { "message": "Kopierade $1 tabeller och text" },
+  "copiedText": { "message": "Kopierade text" }
+}

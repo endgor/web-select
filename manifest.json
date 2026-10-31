@@ -2,13 +2,14 @@
   "manifest_version": 3,
   "name": "Web Select",
   "version": "1.0.0",
-  "description": "Markera ett område på en webbsida och kopiera text och tabeller med formatering, som Edge Web select.",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
   "permissions": ["activeTab", "scripting", "contextMenus"],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Web Select – markera och kopiera",
+    "default_title": "__MSG_actionTitle__",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
@@ -28,7 +29,7 @@
         "default": "Ctrl+Shift+S",
         "mac": "Command+Shift+S"
       },
-      "description": "Markera ett område och kopiera"
+      "description": "__MSG_commandDescription__"
     }
   }
 }
