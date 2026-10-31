@@ -4,24 +4,24 @@
 
 <h1 align="center">Web Select</h1>
 
-<p align="center">Markera ett område på en webbsida och kopiera texten med formatering, precis som Edges gamla <em>Web select</em>.</p>
+<p align="center">Select an area of a web page and copy its text with formatting, just like Edge's old <em>Web select</em>.</p>
 
 ---
 
-Tryck **Ctrl+Shift+S**, klicka på ikonen eller välj **Markera och kopiera område** i högerklicksmenyn. Dra sedan en rektangel över det du vill kopiera, ungefär som i Snipping Tool. Medan du drar markeras exakt de ord och tabellceller som kommer med. När du släpper hamnar innehållet i urklipp.
+Press **Ctrl+Shift+S**, click the toolbar icon, or choose **Markera och kopiera område** from the right-click menu. Then drag a rectangle over what you want to copy, much like the Snipping Tool. While you drag, the exact words and table cells that will be copied are highlighted. When you release, the content goes to your clipboard.
 
-Tabeller klistras in som riktiga celler i Excel. Rubriker, listor, fetstil och länkar bevaras i Word och Outlook.
+Tables paste into Excel as real cells. Headings, lists, bold text, and links are kept when you paste into Word or Outlook.
 
-## Installera
+## Install
 
-1. Ladda ner eller klona repot.
-2. Öppna `chrome://extensions` och slå på **Developer mode**.
-3. Klicka **Load unpacked** och välj mappen.
+1. Download or clone this repository.
+2. Open `chrome://extensions` and turn on **Developer mode**.
+3. Click **Load unpacked** and select the folder.
 
-Kortkommandot kan ändras under `chrome://extensions/shortcuts`. Esc eller högerklick avbryter en markering.
+You can change the shortcut at `chrome://extensions/shortcuts`. Press Esc or right-click to cancel a selection.
 
-## Begränsningar
+## Limitations
 
-- Fungerar inte på `chrome://`-sidor eller i Chrome Web Store.
-- Innehåll som ritas på canvas, till exempel Google Sheets, går inte att läsa ut.
-- Bara det som syns i fönstret kopieras. Innehåll i iframes tas inte med.
+- Doesn't work on `chrome://` pages or in the Chrome Web Store.
+- Content drawn on a canvas, such as Google Sheets, can't be read.
+- Only what's visible in the window is copied. Content inside iframes isn't included.
